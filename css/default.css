@@ -1,0 +1,76 @@
+﻿body {
+  /* 스크롤 및 확대/축소를 사용하도록 설정하려면 이 주석 처리를 제거하세요.
+  터치 동작: 조작;
+  */
+}
+
+h1{
+    text-align : center;
+}
+
+.post{
+    display : inline-block;
+    width : 90%;
+    margin-left : 5%;
+
+    border : 1px solid black;
+    margin-bottom : 50px;
+    padding-left:10px;
+    padding-bottom:10px;
+}
+
+post_title{
+    display : inline-block;
+    width : calc(100% - 132px);
+    text-align : center;
+}
+
+#search{
+    width:80%;
+    margin-left:10%;
+}
+
+#input_title{
+    width:80%;
+    margin-left:10%;
+}
+
+#input_hash_tag_group{
+    width:80%;
+    margin-left:10%;
+}
+
+#input_body_group{
+    margin-left:10%;
+}
+
+iframe{
+    max-width:98%;
+}
+
+img{
+    max-width:98%;
+}
+
+#hide_write_mode{
+    display:none;
+    margin-left : 43%;
+}
+
+@media screen and (min-width : 1080px){
+    .post{
+        width : 43%;
+    }
+    #show_write_mode {
+        display : none;
+    }
+}
+
+@media screen and (max-width : 1079px){
+    mobile_hide{
+        display:none;
+    }
+    #show_write_mode {
+        margin-left : 43%;
+    }
+}

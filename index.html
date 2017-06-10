@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>WebDiary2.0.2</title>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/4.7.0/standard/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="js/InitializeFirebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Web Diary</h1>
+
+    <mobile_hide>
+        <input type="text" class="form-control" placeholder="title" aria-describedby="basic-addon1" id="input_title" />
+
+        <div id="input_body_group">
+            <textarea name="input_body"></textarea>
+            <script>
+                CKEDITOR.replace('input_body');
+                CKEDITOR.config.width = "89%";
+            </script>
+        </div>
+
+        <div class="input-group" id="input_hash_tag_group">
+            <input type="text" class="form-control" id="input_hash_tag" placeholder="hash tag">
+            <span class="input-group-btn">
+                <button class="btn btn-secondary" onclick="addNewPostbyData();" type="button">Post it!</button>
+            </span>
+        </div>
+    </mobile_hide>
+
+    <input type='button' class='btn btn-default' value='Write Post!' id="show_write_mode" onclick="showWriteMode();"/>
+    <input type='button' class='btn btn-default' value='Hide!' id="hide_write_mode" onclick="hideWriteMode();" />
+    <br />
+
+    <div class="input-group" id="search">
+        <span class="input-group-addon">hash tag search</span>
+        <input type="text" class="form-control" id="search_hash_tag">
+        <span class="input-group-btn">
+            <button class="btn btn-secondary" onclick="searchHashTag();" type="button">Search!</button>
+        </span>
+    </div>
+    <br /><br /><br />
+
+    <script src="js/main.js"></script>
+</body>
+</html>
